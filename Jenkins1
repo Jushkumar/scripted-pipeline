@@ -19,6 +19,6 @@ node('built-in')
     }
     stage('Continuous delivery')
     {
-     sh ' /home/ubuntu/.jenkins/workspace/scriptedpipelinesep2022/webapp/target/webapp.war ubuntu@172.31.35.193:/var/lib/tomcat9/webapps/leavelove'
+    sh 'scp /home/ubuntu/.jenkins/workspace/scriptedpipelinesep2022/webapp/target/webapp.war ubuntu@172.31.35.193:/var/lib/tomcat9/webapps/leavelove'
     }
 }    
